@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { User } from '../models/user';
 import { UserService } from '../services/user.service';
@@ -14,7 +15,7 @@ export class UserDetailComponent implements OnInit {
   model: any = {};
   loading = false;
 
-  constructor(private userService: UserService, private alertService: AlertService) { }
+  constructor(private userService: UserService, private alertService: AlertService, private router: Router) { }
 
   ngOnInit() {
     this.model = JSON.parse(localStorage.getItem('currentUser')).user;
@@ -31,14 +32,19 @@ export class UserDetailComponent implements OnInit {
 
         latestUser.firstName = this.model.firstName;
         latestUser.lastName = this.model.lastName;
-        // TODO: back end service not changes the hash
-        // latestUser.password = this.model.password;
+
+        if (this.model.password !== '') {
+          latestUser.password = this.model.password;
+        } else {
+          latestUser.password = '';
+        }
+
         latestUser.email = this.model.email;
         latestUser.phone = this.model.phone;
 
         this.userService.update(latestUser)
           .subscribe(dataUpdate => {
-            this.alertService.success('Atualizado com sucesso');
+            this.router.navigate(['/']);
           }, error => {
             this.alertService.error(error);
           });
