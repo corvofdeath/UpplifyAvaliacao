@@ -1,0 +1,21 @@
+﻿################################################################################
+# Este arquivo .gitignore foi criado automaticamente pelo Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/UpShop/.vs
+/UpShop/.vs
+/UpShop/.vs/config/applicationhost.config
+/UpShop/.vs/UpShop/v15/.suo
+/UpShop/UpShop.Api/bin/Debug/netcoreapp1.1
+/UpShop/UpShop.Api/obj
+/UpShop/.vs
+/UpShop/UpShop.Api/bin/Debug/netcoreapp1.1
+/UpShop/UpShop.Api/obj
+/UpShop/UpShop.Api/obj/Release/netcoreapp1.1
+/UpShop/UpShop.Api/obj
+/UpShop/UpShop.Api/Properties
+/UpShop/UpShop.DAL/bin/Debug/netcoreapp1.1
+/UpShop/UpShop.DAL/obj
+/UpShop/UpShop.Dominio/bin/Debug/netcoreapp1.1
+/UpShop/UpShop.Dominio/obj

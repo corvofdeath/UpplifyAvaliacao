@@ -1,0 +1,23 @@
+<app-head-shop></app-head-shop>
+<div class="container">
+  <div class="homecard">
+      <div class="row">
+          <div class="col-md-4" *ngFor="let product of products">
+            <div class="card" style="width: 20rem;">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-block">
+                  <h4 class="card-title">{{ product.name }}</h4>
+                  <p class="card-text">{{ product.description }}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">{{ product.quantity }}</li>
+                  <li class="list-group-item">{{ product.price }}</li>
+                </ul>
+                <div class="card-block">
+                  <a href="#" class="card-link">Comprar</a>
+                </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
